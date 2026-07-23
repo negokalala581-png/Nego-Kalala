@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitation Mariage</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(#050505, #1a1205);
+    color: white;
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    animation: apparition 2s;
+}
+
+h1 {
+    color: #d4af37;
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    margin: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.ouvrir {
+    background: #d4af37;
+    color: black;
+}
+
+.present {
+    background: green;
+    color: white;
+}
+
+.absent {
+    background: darkred;
+    color: white;
+}
+
+.invitation {
+    display: none;
+}
+
+@keyframes apparition {
+    from {
+        opacity:0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity:1;
+        transform: scale(1);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container" id="accueil">
+
+<h1>💍 Vainqueur & Exaucée 💍</h1>
+
+<p>
+Notre invitation de mariage
+</p>
+
+<button class="ouvrir" onclick="ouvrirInvitation()">
+💌 Ouvrir l'invitation
+</button>
+
+</div>
+
+
+<div class="container invitation" id="invitation">
+
+<h1>❤️ Bienvenue cher invité ❤️</h1>
+
+<p>
+En cette journée grandiose, nous avons l'immense plaisir de vous inviter à prendre part à la célébration de notre union.
+<br><br>
+Cher invité, soyez le bienvenu à partager avec nous ce moment unique et inoubliable.
+</p>
+
+
+<h2>Confirmez votre présence</h2>
+
+<button class="present">
+✅ Je serai présent(e)
+</button>
+
+<button class="absent">
+❌ Je serai empêché(e)
+</button>
+
+</div>
+
+
+<script>
+
+function ouvrirInvitation(){
+
+document.getElementById("accueil").style.display="none";
+
+document.getElementById("invitation").style.display="block";
+
+}
+
+</script>
+
+</body>
+  </html>
